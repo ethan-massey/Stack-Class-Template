@@ -78,7 +78,7 @@ string Stack<T>::toString() {
   string ret = "";
   int count = 0;
   for(int i = 0; i < currentIndex; i++){
-    ret += count << ": " + values[i] + endl;
+    ret += to_string(count) + ": " + to_string(values[i]) + "\n";
     count++;
   }
   return ret;
