@@ -42,10 +42,14 @@ Stack<T>::~Stack() {
 
 template <typename T>
 T Stack<T>::pop() {
-  T temp = values[currentIndex];
-  values[currentIndex] = 0;
-  currentIndex--;
-  return temp;
+  if(currentIndex > 0){
+    T temp = values[currentIndex];
+    values[currentIndex] = 0;
+    currentIndex--;
+    return temp;
+  }else{
+    return 0;
+  }
 }
 
 template <typename T>
